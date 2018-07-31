@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  cities = this.http.get<any>('http://localhost:3000/cities/get-cities');
+  constructor(private http: HttpClient){}
 }

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+          "module": "commonjs",
+          "noImplicitAny": true,
+          "sourceMap": true,
+          "outDir": "../dst/",
+          "target": "es2016",
+          "allowSyntheticDefaultImports": true,
+          "esModuleInterop":true
+  },
+  "lib": [
+          "es2016"
+        ]
+}
