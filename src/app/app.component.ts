@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  cities = this.http.get<any>('http://localhost:3000/cities/get-cities');
+  title = 'Work and Travel';
+  //cities = this.http.get<any>('http://localhost:3000/cities/get-cities');
   constructor(private http: HttpClient){}
 }
