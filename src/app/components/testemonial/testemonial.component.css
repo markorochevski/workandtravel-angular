@@ -1,0 +1,32 @@
+.city_thumb{
+    width: 160px;
+    height: auto;
+}
+
+.city_div{
+    padding: 15px;
+}
+
+.testemonials_div, .thumbs_div{
+    border: 3px solid green;
+}
+
+
+@media screen and (max-width: 640px) {
+    .city_thumb{
+        width: 150px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+        
+}
+
+@media screen and (max-width: 1024px) {
+        
+}
+
+@media screen and (max-width: 1280px) {
+        
+}

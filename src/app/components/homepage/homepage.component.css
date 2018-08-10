@@ -1,0 +1,30 @@
+.homepage_div{
+    background-image: url("../../../assets/images/homepage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background: url("../../../assets/images/homepage.jpg") no-repeat center center;
+    background-size: cover; */
+    /* background-size: auto auto;
+    margin-left: -210px;
+    margin-right: -301px; */
+    /* padding-left: 301px;
+    padding-right: 301px;
+    border-left: 0px;
+    border-right: 0px; */
+    
+    height: 900px;
+}
+
+
+@media screen and (max-width: 640px) {
+    .homepage_div{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .homepage_div{
+        height: 600px;
+    }
+}

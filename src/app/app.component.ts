@@ -8,6 +8,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'Work and Travel';
-  //cities = this.http.get<any>('http://localhost:3000/cities/get-cities');
+  // cities = this.http.get<any>('http://localhost:3000/cities/get-cities');
   constructor(private http: HttpClient){}
 }
