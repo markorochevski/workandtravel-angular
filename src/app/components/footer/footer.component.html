@@ -1,0 +1,35 @@
+<div class="container-fluid footer">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+      <div class="float-left">
+        <span *ngFor="let item of footerItems" class="footer-span">
+          <a href="{{ item.route }}">{{item.displayName}}</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-xs-12">
+      <div class="float-right">
+        <span>
+          <a href="#">
+            {{ this.contactEmail }}
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid footer">
+  <div class="row">
+    <div *ngFor="let item of footerItems" class="col-md-2">
+      <a href="{{ item.route }}">{{item.displayName}}</a>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-6">
+      <a class="float-right" href="#">{{ this.contactEmail }}</a>
+    </div>
+  </div>
+</div>

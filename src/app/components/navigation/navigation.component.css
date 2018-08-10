@@ -1,0 +1,16 @@
+.navbar-brand>img {
+    height: 70px;
+    padding: 5px;
+    width: auto;
+}
+
+.navigation-bar{
+    height: 70px;
+    background-color: rgba(192, 69, 38, 1);
+}
+.nav-link{
+    color: #eadfc9 !important;
+}
+.nav-item{
+    padding-right:20px;
+}

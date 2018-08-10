@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-light navigation-bar">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/images/logo.png" class="img-responisve" id="logo" alt="logo"/>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,12 +10,6 @@
         <li *ngFor="let item of navigationItems" class="nav-item active">
           <a class="nav-link" href="{{ item.route }}">{{item.displayName}} <span class="sr-only">(current)</span></a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li> -->
       </ul>
     </div>
   </nav>

@@ -15,7 +15,7 @@ export class NavigationComponent implements OnInit {
       { route: '/', displayName: 'Почетна'},
       { route: '/iskustva', displayName: 'Искуства'},
       { route: '/prasanja', displayName: 'Прашања'}
-    ]
+    ];
   }
 
 }

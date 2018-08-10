@@ -1,0 +1,25 @@
+.navigation-bar{
+    height: 70px;
+    background-color: rgba(192, 69, 38, 1);
+}
+
+.nav-link{
+    color: #eadfc9 !important;
+}
+
+.footer{
+    padding: 15px 10% 15px 10%;
+    height: 70px;
+    background-color: rgba(192, 69, 38, 1);
+}
+
+.footer a{
+    color: #eadfc9 !important;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.footer-span{
+    padding-right: 30px;
+}
