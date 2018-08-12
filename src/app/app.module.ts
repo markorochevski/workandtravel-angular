@@ -4,22 +4,31 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { TestemonialComponent } from './components/testemonial/testemonial.component';
 import { SideBannerComponent } from './components/side-banner/side-banner.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { RouterModule } from '@angular/router';
+import { CitiesComponent } from './components/cities/cities.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     FooterComponent,
-    TestemonialComponent,
     SideBannerComponent,
-    HomepageComponent
+    HomepageComponent,
+    CitiesComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: '', component: HomepageComponent  },
+      { path: 'iskustva/:route_name', component: PostsComponent  },
+      { path: 'iskustva', component: CitiesComponent  },
+      { path: 'prasanja', component: HomepageComponent  },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

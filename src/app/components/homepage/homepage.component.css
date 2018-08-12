@@ -28,3 +28,24 @@
         height: 600px;
     }
 }
+
+.homepage_icon{
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+.homepage_content{
+    padding: 60px 30px 30px 30px;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: black;
+    color: black;
+}
+
+.homepage_disclaimer{
+    padding-bottom: 90px;
+}

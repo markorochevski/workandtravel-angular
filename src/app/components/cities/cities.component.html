@@ -7,7 +7,7 @@
     <div class="col-lg-8 col-md-6 col-12 thumbs_div">
       <div class="row">
         <div *ngFor="let city of cities | async" class="col-xl-3 col-lg-4 col-md-6 col-6 city_div">
-          <a href="{{ city.route_name }}">
+          <a [routerLink]="['/iskustva', city.route_name]">
               <img src="{{ city.img_url }}" alt="city.name" class="city_thumb"/>
           </a>
         </div>

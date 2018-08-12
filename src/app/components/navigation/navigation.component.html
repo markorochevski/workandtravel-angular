@@ -7,8 +7,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li *ngFor="let item of navigationItems" class="nav-item active">
-          <a class="nav-link" href="{{ item.route }}">{{item.displayName}} <span class="sr-only">(current)</span></a>
+        <li *ngFor="let item of navigationItems" class="nav-item">
+          <a class="nav-link" routerLink="{{ item.route }}">{{item.displayName}} <span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
