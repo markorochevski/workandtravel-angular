@@ -1,10 +1,34 @@
-<div>
-  <div *ngFor="let post of posts | async">
-    <span>
-      {{ post.employer}}
-    </span>
-    <span>
-      {{ post.content }}
-    </span>
+<div class="container-fluid posts_div">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-8">
+      <div *ngFor="let post of posts | async" class="post_div">
+        <h5>{{ post.employer }}</h5>
+        <span class="posts_span">
+          <strong>Агенција:</strong> {{ post.agency }}
+        </span>
+        <span class="posts_span">
+          <strong>Работно место:</strong> {{ post.employer }}
+        </span>
+        <span class="posts_span">
+          <strong>Искуство:</strong> {{ post.content }}
+        </span>
+        <span class="posts_span">
+          <strong>Саатнина:</strong> {{ post.wage }}
+        </span>
+        <span class="posts_span">
+          <strong>Просечен број на саати неделно:</strong> {{ post.avg_hours }}
+        </span>
+        <span class="posts_span">
+          <strong>Година на патување:</strong> {{ post.year }}
+        </span>
+        <!-- <span class="posts_span">
+          <strong>Линк до профил:</strong> {{ post.profile_link }}
+        </span> -->
+        <hr/>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 banner_div">
+      <app-side-banner></app-side-banner>
+    </div>
   </div>
 </div>

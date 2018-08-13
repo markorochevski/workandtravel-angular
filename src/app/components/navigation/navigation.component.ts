@@ -14,7 +14,9 @@ export class NavigationComponent implements OnInit {
     this.navigationItems = [
       { route: '/', displayName: 'Почетна'},
       { route: '/iskustva', displayName: 'Искуства'},
-      { route: '/prasanja', displayName: 'Прашања'}
+      { route: '/prashanja', displayName: 'Прашања'},
+      { route: '/soveti', displayName: 'Совети'},
+      { route: '/spodeli', displayName: 'Сподели искуство'}
     ];
   }
 

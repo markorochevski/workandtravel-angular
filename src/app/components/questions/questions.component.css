@@ -1,0 +1,39 @@
+
+.questions_ul{
+    list-style-type: none;
+}
+
+.questions_title_div{
+    border: 1px solid blue;
+}
+
+@media screen and (min-width: 840px) {
+    .questions_div{
+        margin: auto;
+        max-width: 1200px;
+    }
+}
+
+.questions_div{
+    padding: 40px 30px 40px 30px;
+    border: 1px solid blue;
+    /* color: #a33a20; */
+}
+
+.banner_div{
+    border: 1px solid blue;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: black;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.questions_title_div span:hover{
+    cursor: pointer;
+    color: gray;
+}

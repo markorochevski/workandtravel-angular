@@ -7,8 +7,16 @@
     padding: 15px;
 }
 
-.testemonials_div, .thumbs_div{
+.cities_div, .thumbs_div, .banner_div{
     border: 3px solid green;
+}
+
+
+@media screen and (min-width: 1280px) {
+    .cities_div{
+        margin: auto;
+        max-width: 1300px;
+    }
 }
 
 
