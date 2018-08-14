@@ -24,3 +24,18 @@
     background-color: #c04526;
     color: white;
 }
+.card{
+    border: 1px solid #c04526;
+}
+.card-header{
+    background-color: #c04526;
+    color: white;
+}
+
+.card-body{
+    background-color: #f3e9d8;
+}
+
+.card-footer{
+    background-color: #e7d3b1;
+}
