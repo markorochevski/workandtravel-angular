@@ -39,3 +39,24 @@
 .card-footer{
     background-color: #e7d3b1;
 }
+
+.invalid{
+    /* color: red; */
+}
+
+.invalid input:focus, .invalid textarea:focus, .invalid select:focus{
+    border-color: red;
+    outline: 0;
+}
+
+.valid{
+    color: black;
+}
+
+.error-message{
+    color: red;
+}
+
+.share_custom_input{
+    width: 100px !important;
+}

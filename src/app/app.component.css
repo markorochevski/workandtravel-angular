@@ -1,8 +1,9 @@
-.body-wrapper{
-    /* max-width: 1200px; */
-    /* margin: auto; */
-    /* padding: 20px 0 20px 0; */
-    
+
+
+@media screen and (min-width: 840px) {
+    .body-wrapper{
+        min-height: 800px;        
+    }
 }
 
 .main-wrapper{

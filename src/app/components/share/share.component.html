@@ -10,12 +10,86 @@
 
           <div class="card-body">
 
-            <div class="form-group row" [class.has-error]="agencyControl.invalid && agencyControl.touched" [class.has-success]="agencyControl.valid">
+            <div class="form-group row" [class.invalid]="agencyControl.invalid && agencyControl.touched" [class.valid]="agencyControl.valid">
               <label for="agency" class="control-label col-sm-3">Агенција:</label>
               <div class="col-sm-9">
-                <input #agencyControl="ngModel" id="agency" [(ngModel)]="agency" name="agency" type="text" class="form-control" required/>
+                <input #agencyControl="ngModel" id="agency" [(ngModel)]="agency" name="agency" type="text" class="form-control" placeholder="Агенција" required/>
+                <span class="error-message" *ngIf="agencyControl.invalid && agencyControl.touched">Полето е задолжително</span>
               </div>
-              <div class="alert alert-danger col-12" *ngIf="agencyControl.invalid && agencyControl.touched">Полето агенција е задолжително</div>
+            </div>
+
+            <div class="form-group row" [class.invalid]="employerControl.invalid && employerControl.touched" [class.valid]="employerControl.valid">
+              <label for="employer" class="control-label col-sm-3">Работно место:</label>
+              <div class="col-sm-9">
+                <input #employerControl="ngModel" id="employer" [(ngModel)]="employer" name="employer" type="text" class="form-control" placeholder="Компанија, Град, Држава"  required/>
+                <span class="error-message" *ngIf="employerControl.invalid && employerControl.touched">Полето е задолжително</span>
+              </div>
+            </div>
+
+            <div class="form-group row" [class.invalid]="contentControl.invalid && contentControl.touched" [class.valid]="contentControl.valid">
+              <label for="employer" class="control-label col-sm-3">Искуство:</label>
+              <div class="col-sm-9">
+                <textarea #contentControl="ngModel" rows="6" id="content" [(ngModel)]="content" name="content" type="text"  placeholder="Сподели го твоето искуство околу агенцијата, работата, работодавецот, градот..." class="form-control"
+                  required></textarea>
+                <span class="error-message" *ngIf="contentControl.invalid && contentControl.touched">Полето е задолжително</span>
+              </div>
+            </div>
+
+            <div class="form-group row" [class.invalid]="wageControl.invalid && wageControl.touched" [class.valid]="wageControl.valid">
+              <label for="employer" class="control-label col-sm-3">Саатнина:</label>
+              <div class="col-sm-9">
+                <input #wageControl="ngModel" id="wage" [(ngModel)]="wage" name="wage" type="text" class="form-control share_custom_input"
+                  required/>
+                <span class="error-message" *ngIf="wageControl.invalid && wageControl.touched">Полето е задолжително</span>
+              </div>
+            </div>
+
+            <div class="form-group row" [class.invalid]="avgHoursControl.invalid && avgHoursControl.touched" [class.valid]="avgHoursControl.valid">
+              <label for="avg_hours" class="control-label col-sm-3">Просечен број на саати неделно:</label>
+              <div class="col-sm-9">
+                <input #avgHoursControl="ngModel" id="avg_hours" [(ngModel)]="avg_hours" name="avg_hours" type="text" class="form-control share_custom_input"
+                  required/>
+                <span class="error-message" *ngIf="avgHoursControl.invalid && avgHoursControl.touched">Полето е задолжително</span>
+              </div>
+            </div>
+
+            <div class="form-group row" [class.invalid]="yearControl.invalid && yearControl.touched" [class.valid]="yearControl.valid">
+              <label for="year" class="control-label col-sm-3">Година:</label>
+              <div class="col-sm-9">
+                <select #yearControl="ngModel" id="year" [(ngModel)]="year" name="year" type="text" class="form-control share_custom_input"
+                  required>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2000" selected></option>
+                </select>
+                <span class="error-message" *ngIf="yearControl.invalid && yearControl.touched">Полето е задолжително</span>
+              </div>
+            </div>
+
+            <div class="form-group row" [class.invalid]="profileLinkControl.invalid && profileLinkControl.touched" [class.valid]="profileLinkControl.valid">
+              <label for="profile_link" class="control-label col-sm-3">Facebook линк:</label>
+              <div class="col-sm-9">
+                <input #profileLinkControl="ngModel" id="profile_link" [(ngModel)]="profile_link" name="profile_link" type="text" class="form-control"
+                  placeholder="За проверка на веродостојноста на твојот профил" required/>
+                <span class="error-message" *ngIf="profileLinkControl.invalid && profileLinkControl.touched">Полето е задолжително</span>
+              </div>
+            </div>
+
+            <div class="form-group row" [class.invalid]="profileLinkControl.invalid && profileLinkControl.touched" [class.valid]="profileLinkControl.valid">
+              <label for="profile_link" class="control-label col-sm-3">Дали сакаш твојот профил да биде достапен за контакт?</label>
+              <div class="col-sm-9">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="linkPublic" id="yes" value="yes" checked>
+                  <label class="form-check-label" for="yes">да</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="linkPublic" id="no" value="no">
+                  <label class="form-check-label" for="no">не</label>
+                </div>
+                <span class="error-message" *ngIf="profileLinkControl.invalid && profileLinkControl.touched">Полето е задолжително</span>
+              </div>
             </div>
 
             <button class="btn" [disabled]="shareForm.invalid" type="submit">Сподели</button>
@@ -29,15 +103,6 @@
     </div>
     <div class="col-12 col-md-6 col-lg-4 banner_div">
       <app-side-banner></app-side-banner>
-      <!-- <form>
-          <div class="form-group has-error has-feedback">
-              <label class="col-sm-2 control-label" for="inputError">Input with error and glyphicon</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputError">
-                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-              </div>
-            </div>
-      </form> -->
     </div>
   </div>
 </div>
