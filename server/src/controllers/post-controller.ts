@@ -18,7 +18,8 @@ class PostController {
                 wage: newPost.wage,
                 avg_hours: newPost.avg_hours,
                 year: newPost.year,
-                profile_link: newPost.profile_link
+                profile_link: newPost.profile_link,
+                profile_link_public: newPost.profile_link_public
             }, (err: any, data: any) => {
                 if (err) {
                     console.log('Can not create a post');

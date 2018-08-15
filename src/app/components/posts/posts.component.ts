@@ -19,7 +19,7 @@ export class PostsComponent implements OnInit {
       this.route_name = params.get('route_name');
     });
     console.log('Route name: ', this.route_name);
-    this.posts = this.http.get('http://localhost:3000/posts/get-posts/'+this.route_name);
+    this.posts = this.http.get('http://localhost:3000/posts/get-posts/' + this.route_name);
     console.log('Posts: ', this.posts);
   }
 

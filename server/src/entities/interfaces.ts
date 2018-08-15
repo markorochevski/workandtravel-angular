@@ -13,4 +13,5 @@ export interface newPost{
     avg_hours: string;
     year: string;
     profile_link: string;
+    profile_link_public: string;
 }

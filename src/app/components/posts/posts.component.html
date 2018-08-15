@@ -21,7 +21,7 @@
         <span class="posts_span">
           <strong>Година на патување:</strong> {{ post.year }}
         </span>
-        <span *ngIf="post.profile_link" class="posts_span">
+        <span *ngIf="post.profile_link_public=='yes'" class="posts_span">
           <a href="{{ post.profile_link }}" target="_blank"> Линк до профил </a>
         </span>
         <hr/>

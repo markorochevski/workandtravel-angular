@@ -9,7 +9,8 @@ const PostSchema = new mongoose.Schema({
     wage: String,
     avg_hours: String,
     year: String,
-    profile_link: String
+    profile_link: String,
+    profile_link_public: String
 });
 
 export let Post = mongoose.model('Post', PostSchema);

@@ -40,12 +40,13 @@
     background-color: #e7d3b1;
 }
 
-.invalid{
-    /* color: red; */
+.invalid input, .invalid textarea, .invalid select{
+    border-color: #c04526;
 }
 
 .invalid input:focus, .invalid textarea:focus, .invalid select:focus{
-    border-color: red;
+    /* box-shadow:none !important; */
+    border-color: #c04526;
     outline: 0;
 }
 
@@ -54,7 +55,8 @@
 }
 
 .error-message{
-    color: red;
+    color: #c04526;
+    font-size: 14px;
 }
 
 .share_custom_input{
