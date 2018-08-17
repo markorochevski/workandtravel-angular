@@ -1,0 +1,64 @@
+<div class="container-fluid contact_div">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-8 contact_left_side_div">
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-12">
+          <div class="contact_heading text-center">
+            КОНТАКТ
+          </div>
+          <hr/>
+          <div class="contact_sub_heading text-center">
+            Сакаме да помогнеме!
+          </div>
+          <div class="contact_text text-center">
+            Самите сме биле учесници на оваа програма и затоа сакаме да им помогнеме на сите оние кои се заинтересирани да го направат
+            истото! Слободно контактирајте не за било што!
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <form class="contact_form" #contactForm="ngForm" (ngSubmit)="saveContact(contactForm)">
+
+          <div class="form-group row" [class.invalid]="nameControl.invalid && nameControl.touched" [class.valid]="nameControl.valid">
+            <!-- <label for="agency" class="control-label col-sm-3">Агенција:</label> -->
+            <div class="col-lg-8 offset-lg-2 col-12">
+              <input #nameControl="ngModel" id="name" [(ngModel)]="name" name="name" type="text" class="form-control" placeholder="Твоето име"
+                required/>
+              <span class="error-message" *ngIf="nameControl.invalid && nameControl.touched">Полето е задолжително</span>
+            </div>
+          </div>
+
+          <div class="form-group row" [class.invalid]="emailControl.invalid && emailControl.touched" [class.valid]="emailControl.valid">
+            <div class="col-lg-8 offset-lg-2 col-12">
+              <input #emailControl="ngModel" id="email" [(ngModel)]="email" name="email" type="text" class="form-control" placeholder="Твојата емаил адреса"
+                required email/>
+              <span class="error-message" *ngIf="emailControl.invalid && emailControl.touched">Полето е задолжително</span>
+            </div>
+          </div>
+
+          <div class="form-group row" [class.invalid]="messageControl.invalid && messageControl.touched" [class.valid]="messageControl.valid">
+            <div class="col-lg-8 offset-lg-2 col-12">
+              <textarea #messageControl="ngModel" rows="7" id="message" [(ngModel)]="message" name="message" type="text" placeholder="Порака"
+                class="form-control" required></textarea>
+              <span class="error-message" *ngIf="messageControl.invalid && messageControl.touched">Полето е задолжително</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-12">
+              <button class="btn btn-block" [disabled]="contactForm.invalid" type="submit">Сподели</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 banner_div">
+      <app-side-banner></app-side-banner>
+    </div>
+  </div>
+</div>

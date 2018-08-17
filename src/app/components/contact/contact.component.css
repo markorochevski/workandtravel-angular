@@ -1,0 +1,68 @@
+@media screen and (min-width: 840px) {
+    .contact_div{
+        margin: auto;
+        max-width: 1200px;
+    }
+}
+
+.contact_div{
+    padding: 40px 30px 40px 30px;
+    border: 1px solid blue;
+}
+
+.banner_div, .contact_left_side_div{
+    border: 1px solid blue;
+}
+
+.invalid input, .invalid textarea, .invalid select{
+    border-color: #c04526;
+}
+
+.invalid input:focus, .invalid textarea:focus, .invalid select:focus{
+    /* box-shadow:none !important; */
+    border-color: #c04526;
+    outline: 0;
+}
+
+.valid{
+    color: black;
+}
+
+.error-message{
+    color: #c04526;
+    font-size: 14px;
+}
+
+.contact_form button{
+    background-color: #c04526;
+    color: white;
+}
+
+.contact_heading{
+    font-size: 26px;
+    color: #c04526;
+}
+
+.contact_sub_heading{
+    font-size: 20px;
+    color: #c04526;
+}
+
+.contact_text{
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* hr{
+    border: 1px dashed #c04526;
+    border-style: none none dashed; 
+    color: #fff; 
+    background-color: #fff;
+} */
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #c04526;
+    color: #c04526;
+}

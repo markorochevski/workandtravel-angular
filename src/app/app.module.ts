@@ -13,6 +13,7 @@ import { QuestionsComponent } from './components/questions/questions.component';
 import { AdvicesComponent } from './components/advices/advices.component';
 import { ShareComponent } from './components/share/share.component';
 import { FormsModule } from '@angular/forms';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     PostsComponent,
     QuestionsComponent,
     AdvicesComponent,
-    ShareComponent
+    ShareComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ import { FormsModule } from '@angular/forms';
       { path: 'prashanja', component: QuestionsComponent  },
       { path: 'soveti', component: AdvicesComponent  },
       { path: 'spodeli', component: ShareComponent  },
-      { path: 'kontakt', component: HomepageComponent  }
+      { path: 'kontakt', component: ContactComponent  }
     ])
   ],
   providers: [],
