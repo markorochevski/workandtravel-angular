@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-confirm-share',
-  templateUrl: './confirm-share.component.html',
-  styleUrls: ['./confirm-share.component.css']
+  selector: 'app-confirm-contact',
+  templateUrl: './confirm-contact.component.html',
+  styleUrls: ['./confirm-contact.component.css']
 })
-export class ConfirmShareComponent implements OnInit {
+export class ConfirmContactComponent implements OnInit {
 
   constructor(private router: Router) { }
 

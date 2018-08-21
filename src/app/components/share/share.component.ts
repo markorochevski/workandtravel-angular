@@ -23,8 +23,7 @@ export class ShareComponent implements OnInit {
       console.log('Res:', res);
     });
 
-    // TODO: change to different page
-    this.router.navigate(['/']);
+    this.router.navigate(['/spodeli-potvrda']);
   }
 
 }

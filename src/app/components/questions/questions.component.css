@@ -5,6 +5,7 @@
 
 .questions_title_div{
     border: 1px solid blue;
+    color: #c04526;
 }
 
 @media screen and (min-width: 840px) {
@@ -20,6 +21,10 @@
     /* color: #a33a20; */
 }
 
+.questions_content_title{
+    color: #c04526;
+}
+
 .banner_div{
     border: 1px solid blue;
 }
@@ -27,13 +32,13 @@
 hr{
     border: none;
     height: 1px;
-    background-color: black;
-    color: black;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    background-color: #c04526;
+    /* color: black; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
 }
 
 .questions_title_div span:hover{
     cursor: pointer;
-    color: gray;
+    color: #dd7055;
 }

@@ -16,6 +16,10 @@
     padding: 5px 10px;  
 }
 
+.footer a:hover{
+    color: #eeb8aa !important;
+}
+
 @media screen and (max-width: 640px) {
     .homepage_div{
         height: 400px;

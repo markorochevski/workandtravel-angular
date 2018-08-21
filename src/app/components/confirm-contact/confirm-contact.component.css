@@ -1,11 +1,11 @@
 @media screen and (min-width: 840px) {
-    .confirm_share_div{
+    .confirm_contact_div{
         margin: auto;
         max-width: 1200px;
     }
 }
 
-.confirm_share_div{
+.confirm_contact_div{
     padding: 40px 30px 40px 30px;
     border: 1px solid blue;
 }
@@ -14,7 +14,7 @@
     border: 1px solid blue;
 }
 
-.confirm_share_heading{
+.confirm_contact_heading{
     font-size: 20px;
     color: #c04526;
     display: block;
@@ -27,7 +27,7 @@ hr{
     color: #c04526;
 }
 
-.confirm_share_button{
+.confirm_contact_button{
     margin: 30px auto 0 auto;
     width: 70%;
     background-color: #c04526;

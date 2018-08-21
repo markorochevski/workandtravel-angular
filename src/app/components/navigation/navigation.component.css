@@ -8,9 +8,15 @@
     height: 70px;
     background-color: #c04526;
 }
+
 .nav-link{
     color: #eadfc9 !important;
 }
+
+.nav-link:hover{
+    color: #eeb8aa !important;
+}
+
 .nav-item{
     padding-right:20px;
 }

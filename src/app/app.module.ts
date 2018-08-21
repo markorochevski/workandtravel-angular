@@ -15,6 +15,7 @@ import { ShareComponent } from './components/share/share.component';
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
 import { ConfirmShareComponent } from './components/confirm-share/confirm-share.component';
+import { ConfirmContactComponent } from './components/confirm-contact/confirm-contact.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ConfirmShareComponent } from './components/confirm-share/confirm-share.
     AdvicesComponent,
     ShareComponent,
     ContactComponent,
-    ConfirmShareComponent
+    ConfirmShareComponent,
+    ConfirmContactComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { ConfirmShareComponent } from './components/confirm-share/confirm-share.
       { path: 'soveti', component: AdvicesComponent  },
       { path: 'spodeli', component: ShareComponent  },
       { path: 'spodeli-potvrda', component: ConfirmShareComponent  },
-      { path: 'kontakt', component: ContactComponent  }
+      { path: 'kontakt', component: ContactComponent  },
+      { path: 'kontakt-potvrda', component: ConfirmContactComponent  }
     ])
   ],
   providers: [],

@@ -22,7 +22,6 @@ export class ContactComponent implements OnInit {
     //   console.log('Res:', res);
     // });
 
-    // TODO: change to different page
-    this.router.navigate(['/']);
+    this.router.navigate(['/kontakt-potvrda']);
   }
 }

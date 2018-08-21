@@ -1,30 +1,33 @@
 <div class="container-fluid posts_div">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-8">
-      <div *ngFor="let post of posts | async" class="post_div">
-        <h5>{{ post.employer }}</h5>
-        <span class="posts_span">
-          <strong>Агенција:</strong> {{ post.agency }}
-        </span>
-        <span class="posts_span">
-          <strong>Работно место:</strong> {{ post.employer }}
-        </span>
-        <span class="posts_span">
-          <strong>Искуство:</strong> {{ post.content }}
-        </span>
-        <span class="posts_span">
-          <strong>Саатнина:</strong> {{ post.wage }}
-        </span>
-        <span class="posts_span">
-          <strong>Просечен број на саати неделно:</strong> {{ post.avg_hours }}
-        </span>
-        <span class="posts_span">
-          <strong>Година на патување:</strong> {{ post.year }}
-        </span>
-        <span *ngIf="post.profile_link_public=='yes'" class="posts_span">
-          <a href="{{ post.profile_link }}" target="_blank"> Линк до профил </a>
-        </span>
-        <hr/>
+      <div *ngFor="let post of posts | async">
+        <!-- TODO: change to post.is_approved-->
+        <div class="post_div" *ngIf="post.profile_link_public=='yes'">
+          <h5 class="posts_content_title">{{ post.employer }}</h5>
+          <span class="posts_span">
+            <strong>Агенција:</strong> {{ post.agency }}
+          </span>
+          <span class="posts_span">
+            <strong>Работно место:</strong> {{ post.employer }}
+          </span>
+          <span class="posts_span">
+            <strong>Искуство:</strong> {{ post.content }}
+          </span>
+          <span class="posts_span">
+            <strong>Саатнина:</strong> {{ post.wage }}
+          </span>
+          <span class="posts_span">
+            <strong>Просечен број на саати неделно:</strong> {{ post.avg_hours }}
+          </span>
+          <span class="posts_span">
+            <strong>Година на патување:</strong> {{ post.year }}
+          </span>
+          <span *ngIf="post.profile_link_public=='yes'" class="posts_span">
+            <a href="{{ post.profile_link }}" target="_blank"> Линк до профил </a>
+          </span>
+          <hr/>
+        </div>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-4 banner_div">
