@@ -14,6 +14,7 @@ import { AdvicesComponent } from './components/advices/advices.component';
 import { ShareComponent } from './components/share/share.component';
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
+import { ConfirmShareComponent } from './components/confirm-share/confirm-share.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContactComponent } from './components/contact/contact.component';
     QuestionsComponent,
     AdvicesComponent,
     ShareComponent,
-    ContactComponent
+    ContactComponent,
+    ConfirmShareComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { ContactComponent } from './components/contact/contact.component';
       { path: 'prashanja', component: QuestionsComponent  },
       { path: 'soveti', component: AdvicesComponent  },
       { path: 'spodeli', component: ShareComponent  },
+      { path: 'spodeli-potvrda', component: ConfirmShareComponent  },
       { path: 'kontakt', component: ContactComponent  }
     ])
   ],

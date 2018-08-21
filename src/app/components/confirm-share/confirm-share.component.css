@@ -1,0 +1,41 @@
+@media screen and (min-width: 840px) {
+    .share_div{
+        margin: auto;
+        max-width: 1200px;
+    }
+}
+
+.share_div{
+    padding: 40px 30px 40px 30px;
+    border: 1px solid blue;
+}
+
+.banner_div{
+    border: 1px solid blue;
+}
+
+.share_form{
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #c04526;
+}
+
+.confirm_share_heading{
+    font-size: 20px;
+    color: #c04526;
+    display: block;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #c04526;
+    color: #c04526;
+}
+
+.confirm_share_button{
+    margin: 30px auto 0 auto;
+    width: 70%;
+    background-color: #c04526;
+    color: white;
+}

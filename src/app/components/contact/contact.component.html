@@ -32,9 +32,9 @@
 
           <div class="form-group row" [class.invalid]="emailControl.invalid && emailControl.touched" [class.valid]="emailControl.valid">
             <div class="col-lg-8 offset-lg-2 col-12">
-              <input #emailControl="ngModel" id="email" [(ngModel)]="email" name="email" type="text" class="form-control" placeholder="Твојата емаил адреса"
+              <input #emailControl="ngModel" id="email" [(ngModel)]="email" name="email" type="email" class="form-control" placeholder="Твојата емаил адреса"
                 required email/>
-              <span class="error-message" *ngIf="emailControl.invalid && emailControl.touched">Полето е задолжително</span>
+              <span class="error-message" *ngIf="emailControl.invalid && emailControl.touched">Невалиден формат на емаил адреса</span>
             </div>
           </div>
 
