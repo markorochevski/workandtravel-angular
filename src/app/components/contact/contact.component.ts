@@ -18,9 +18,9 @@ export class ContactComponent implements OnInit {
     // the form object
     console.log(contactForm.value);
     // TODO: change post link
-    // this.http.post('http://localhost:3000/posts/add-post', contactForm.value).subscribe(res => {
-    //   console.log('Res:', res);
-    // });
+    this.http.post('http://localhost:3000/messages/add-message', contactForm.value).subscribe(res => {
+      console.log('Res:', res);
+    });
 
     this.router.navigate(['/kontakt-potvrda']);
   }
