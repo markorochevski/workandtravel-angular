@@ -15,3 +15,9 @@ export interface newPost{
     profile_link: string;
     profile_link_public: string;
 }
+
+export interface newMessage{
+    name: string;
+    email: string;
+    message: string;
+}

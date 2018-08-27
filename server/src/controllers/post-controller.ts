@@ -23,7 +23,7 @@ class PostController {
                 is_approved: 'no'
             }, (err: any, data: any) => {
                 if (err) {
-                    console.log('Can not create a post');
+                    console.log('Can not add a post');
                     return reject({ code: err.code, message: err.message });
                 }
                 else {
@@ -100,6 +100,16 @@ class PostController {
                     return resolve(data);
                 }
             });
+        });
+    }
+
+    public addPosts(posts: newPost[]) {
+        return new Promise((resolve: any, reject: any) => {
+            _.forEach(posts, post => {
+                console.log('Post: ', post);
+                this.addPost(post);
+            });
+            return resolve({ done: true });
         });
     }
 }

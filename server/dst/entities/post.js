@@ -11,7 +11,8 @@ const PostSchema = new mongoose.Schema({
     avg_hours: String,
     year: String,
     profile_link: String,
-    profile_link_public: String
+    profile_link_public: String,
+    is_approved: String
 });
 exports.Post = mongoose.model('Post', PostSchema);
 //# sourceMappingURL=post.js.map

@@ -20,6 +20,18 @@ app.post('/add-post', (req: any, res: any) => {
         });
 });
 
+app.post('/add-posts', (req: any, res: any) => {
+    console.log('Calling route /add-posts');
+    const posts = req.body;
+    return PostController.addPosts(posts)
+        .then((result: any) => {
+            return res.send(result);
+        })
+        .catch((err: any) => {
+            return res.status(err.code).send(err);
+        });
+});
+
 app.get('/get-all-posts', (req: any, res: any) => {
     console.log('Calling route /get-posts');
     return PostController.getAllPosts()
