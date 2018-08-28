@@ -21,6 +21,17 @@ app.post('/add-post', (req, res) => {
         return res.status(err.code).send(err);
     });
 });
+app.post('/add-posts', (req, res) => {
+    console.log('Calling route /add-posts');
+    const posts = req.body;
+    return post_controller_1.default.addPosts(posts)
+        .then((result) => {
+        return res.send(result);
+    })
+        .catch((err) => {
+        return res.status(err.code).send(err);
+    });
+});
 app.get('/get-all-posts', (req, res) => {
     console.log('Calling route /get-posts');
     return post_controller_1.default.getAllPosts()

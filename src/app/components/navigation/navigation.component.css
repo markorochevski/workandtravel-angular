@@ -1,11 +1,11 @@
 .navbar-brand>img {
-    height: 70px;
-    padding: 5px;
+    height: 60px;
+    /* padding: 5px; */
     width: auto;
 }
 
 .navigation-bar{
-    height: 70px;
+    /* height: 70px; */
     background-color: #c04526;
 }
 

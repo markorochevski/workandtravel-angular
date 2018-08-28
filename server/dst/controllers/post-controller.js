@@ -27,10 +27,11 @@ class PostController {
                 year: newPost.year,
                 profile_link: newPost.profile_link,
                 profile_link_public: newPost.profile_link_public,
-                is_approved: 'no'
+                is_approved: 'yes'
+                // TODO: change is_approved to no
             }, (err, data) => {
                 if (err) {
-                    console.log('Can not create a post');
+                    console.log('Can not add a post');
                     return reject({ code: err.code, message: err.message });
                 }
                 else {
@@ -55,7 +56,7 @@ class PostController {
         });
     }
     getPostsByCity(name) {
-        return all_1.Post.find({ route_name: name })
+        return all_1.Post.find({ route_name: name }).sort({ year: -1 })
             .then((data) => {
             if (_.isEmpty(data)) {
                 return Promise.reject({ code: 404, message: 'Post does not exist' });
@@ -102,6 +103,15 @@ class PostController {
                     return resolve(data);
                 }
             });
+        });
+    }
+    addPosts(posts) {
+        return new Promise((resolve, reject) => {
+            _.forEach(posts, post => {
+                console.log('Post: ', post);
+                this.addPost(post);
+            });
+            return resolve({ done: true });
         });
     }
 }

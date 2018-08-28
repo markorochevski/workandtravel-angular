@@ -4,7 +4,7 @@ import * as _ from 'lodash';
 const Promise = require('bluebird');
 
 class PostController {
-    constructor() {}
+    constructor() { }
 
     public addPost(newPost: newPost) {
         return new Promise((resolve: any, reject: any) => {
@@ -20,7 +20,8 @@ class PostController {
                 year: newPost.year,
                 profile_link: newPost.profile_link,
                 profile_link_public: newPost.profile_link_public,
-                is_approved: 'no'
+                is_approved: 'yes'
+                // TODO: change is_approved to no
             }, (err: any, data: any) => {
                 if (err) {
                     console.log('Can not add a post');
@@ -50,7 +51,7 @@ class PostController {
     }
 
     public getPostsByCity(name: string) {
-        return Post.find({ route_name: name })
+        return Post.find({ route_name: name }).sort({ year: -1 })
             .then((data: any) => {
                 if (_.isEmpty(data)) {
                     return Promise.reject({ code: 404, message: 'Post does not exist' });

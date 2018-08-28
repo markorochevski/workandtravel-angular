@@ -1,9 +1,9 @@
 <div class="container-fluid posts_div">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-8">
-      <div *ngFor="let post of posts | async">
+      <div *ngFor="let post of posts  | async">
         <!-- TODO: change to post.is_approved-->
-        <div class="post_div" *ngIf="post.profile_link_public=='yes'">
+        <div class="post_div" *ngIf="post.is_approved=='yes'">
           <h5 class="posts_content_title">{{ post.employer }}</h5>
           <span class="posts_span">
             <strong>Агенција:</strong> {{ post.agency }}
