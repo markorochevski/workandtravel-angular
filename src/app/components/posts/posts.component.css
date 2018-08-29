@@ -7,7 +7,7 @@
 
 .posts_div{
     padding: 40px 30px 40px 30px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .posts_span{
@@ -16,18 +16,18 @@
 }
 
 .post_div{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .banner_div{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 hr{
     border: none;
     height: 1px;
-    background-color: black;
-    color: black;
+    background-color: #c04526;
+    /* color: black; */
     margin-top: 50px;
     margin-bottom: 50px;
 }

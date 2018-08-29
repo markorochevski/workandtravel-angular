@@ -7,17 +7,17 @@
 
 .share_div{
     padding: 40px 30px 40px 30px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .banner_div{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .share_form{
     border-radius: 10px;
     padding: 10px;
-    border: 1px solid #c04526;
+    /* border: 1px solid #c04526; */
 }
 
 .share_form h5, .share_form button{

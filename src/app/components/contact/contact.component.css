@@ -7,11 +7,11 @@
 
 .contact_div{
     padding: 40px 30px 40px 30px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .banner_div, .contact_left_side_div{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .invalid input, .invalid textarea, .invalid select{
