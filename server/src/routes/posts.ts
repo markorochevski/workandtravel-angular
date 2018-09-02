@@ -64,3 +64,15 @@ app.delete('/delete/:id', (req: any, res: any) => {
             return res.status(err.code).send(err);
         });
 });
+
+
+app.post('/search', (req: any, res: any) => {
+    console.log('Calling route /search/:text');
+    return PostController.searchInEmployer(req.body.text)
+        .then((result: any) => {
+            return res.send(result);
+        })
+        .catch((err: any) => {
+            return res.status(err.code).send(err);
+        });
+});

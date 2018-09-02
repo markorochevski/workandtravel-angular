@@ -114,6 +114,29 @@ class PostController {
             return resolve({ done: true });
         });
     }
+    searchInEmployer(input) {
+        return new Promise((resolve, reject) => {
+            const words = input.split(' ');
+            let text = '';
+            for (let word of words) {
+                text += word + '|';
+            }
+            text = text.slice(0, -1);
+            console.log(text);
+            const query = new RegExp(text, 'ig');
+            return all_1.Post.find({ employer: query }, (err, data) => {
+                if (err) {
+                    console.log('Error getting result: ', err);
+                    return reject({ code: err.code, message: err.message });
+                }
+                else {
+                    console.log('Success getting result');
+                    //  console.log(data);
+                    return resolve(data);
+                }
+            });
+        });
+    }
 }
 exports.default = new PostController();
 //# sourceMappingURL=post-controller.js.map

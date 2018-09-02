@@ -62,4 +62,14 @@ app.delete('/delete/:id', (req, res) => {
         return res.status(err.code).send(err);
     });
 });
+app.post('/search', (req, res) => {
+    console.log('Calling route /search/:text');
+    return post_controller_1.default.searchInEmployer(req.body.text)
+        .then((result) => {
+        return res.send(result);
+    })
+        .catch((err) => {
+        return res.status(err.code).send(err);
+    });
+});
 //# sourceMappingURL=posts.js.map
