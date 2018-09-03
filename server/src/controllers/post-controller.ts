@@ -115,6 +115,7 @@ class PostController {
     }
 
     public searchInEmployer(input: string) {
+        console.log('Search in empolyer: ', input);
         return new Promise((resolve: any, reject: any) => {
             const words = input.split(' ');
             let text = '';

@@ -20,3 +20,11 @@
 .nav-item{
     padding-right:20px;
 }
+
+.navbar_search_btn{
+    color: #c04526;
+}
+
+.form-inline{
+    flex-flow: nowrap !important;
+}

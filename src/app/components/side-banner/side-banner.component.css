@@ -1,3 +1,13 @@
 .side_banner_div{
     padding: 15px;
 }
+
+@media screen and (max-width: 360px) {
+    .side_banner_div{
+        padding: 10px;
+    }
+    .side_banner_div img{
+        width: 90%;
+        height: auto;
+    }
+}

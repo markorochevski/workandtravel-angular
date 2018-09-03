@@ -27,6 +27,17 @@
     }
 }
 
+@media screen and (max-width: 350px) {
+    .city_div{
+        padding: 10px;
+    }
+    .city_thumb{
+        width: 130px;
+        height: auto;
+        
+    }
+}
+
 @media screen and (max-width: 800px) {
         
 }

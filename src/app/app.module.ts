@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
 import { ConfirmShareComponent } from './components/confirm-share/confirm-share.component';
 import { ConfirmContactComponent } from './components/confirm-contact/confirm-contact.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ConfirmContactComponent } from './components/confirm-contact/confirm-co
     ShareComponent,
     ContactComponent,
     ConfirmShareComponent,
-    ConfirmContactComponent
+    ConfirmContactComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { ConfirmContactComponent } from './components/confirm-contact/confirm-co
       { path: 'spodeli', component: ShareComponent  },
       { path: 'spodeli-potvrda', component: ConfirmShareComponent  },
       { path: 'kontakt', component: ContactComponent  },
-      { path: 'kontakt-potvrda', component: ConfirmContactComponent  }
+      { path: 'kontakt-potvrda', component: ConfirmContactComponent  },
+      { path: 'prebaraj', component: SearchComponent  }
     ])
   ],
   providers: [],

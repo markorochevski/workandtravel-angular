@@ -1,0 +1,42 @@
+@media screen and (min-width: 840px) {
+    .posts_div{
+        margin: auto;
+        max-width: 1200px;
+    }
+}
+
+.posts_div{
+    padding: 40px 30px 40px 30px;
+    /* border: 1px solid blue; */
+}
+
+.posts_span{
+    display: block;
+    font-size: 14px;
+}
+
+.post_div{
+    /* border: 1px solid blue; */
+}
+
+.banner_div{
+    /* border: 1px solid blue; */
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #c04526;
+    /* color: black; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.posts_content_title{
+    color: #c04526;
+}
+
+.search_div_header{
+    font-size: 22px;
+    margin-bottom: 30px;
+}

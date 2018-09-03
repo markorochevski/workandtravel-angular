@@ -11,4 +11,12 @@
 <body>
   <app-root></app-root>
 </body>
+
+<script>
+  $(document).on('click','.navbar-collapse.show',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+});
+</script>
 </html>
