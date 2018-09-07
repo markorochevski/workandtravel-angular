@@ -35,3 +35,11 @@ hr{
 .posts_content_title{
     color: #c04526;
 }
+
+.fb_message{
+    color: white;
+    background-color: #c04526;
+    font-size: 14px;
+    border: none;
+    margin-top: 10px;
+}

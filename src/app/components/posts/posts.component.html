@@ -24,7 +24,10 @@
             <strong>Година на патување:</strong> {{ post.year }}
           </span>
           <span *ngIf="post.profile_link_public=='yes'" class="posts_span">
-            <a href="{{ post.profile_link }}" target="_blank"> Линк до профил </a>
+            <!-- <a href="{{ post.profile_link }}" target="_blank"> Линк до профил </a> -->
+            <a target="_blank" class="btn btn-primary fb_message" href="https://m.me/{{ post.profile_link_path}}">
+              <i class="fa fa-telegram"></i> Контактирај ме!
+            </a>
           </span>
           <hr/>
         </div>

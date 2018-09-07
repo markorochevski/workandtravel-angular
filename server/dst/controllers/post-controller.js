@@ -12,7 +12,13 @@ const all_1 = require("../entities/all");
 const _ = __importStar(require("lodash"));
 const Promise = require('bluebird');
 class PostController {
-    constructor() { }
+    constructor() {
+        this.getFacebookUserPath = (link) => {
+            const regex = new RegExp('.*\/');
+            const path = link.replace(regex, '');
+            return path;
+        };
+    }
     addPost(newPost) {
         return new Promise((resolve, reject) => {
             const id = uuid.v4();
@@ -27,6 +33,7 @@ class PostController {
                 year: newPost.year,
                 profile_link: newPost.profile_link,
                 profile_link_public: newPost.profile_link_public,
+                profile_link_path: this.getFacebookUserPath(newPost.profile_link),
                 is_approved: 'yes'
                 // TODO: change is_approved to no
             }, (err, data) => {
@@ -119,13 +126,23 @@ class PostController {
         return new Promise((resolve, reject) => {
             const words = input.split(' ');
             let text = '';
-            for (let word of words) {
+            for (const word of words) {
                 text += word + '|';
             }
             text = text.slice(0, -1);
             console.log(text);
             const query = new RegExp(text, 'ig');
-            return all_1.Post.find({ employer: query }, (err, data) => {
+            return all_1.Post.find({
+                $or: [
+                    { agency: query },
+                    { route_name: query },
+                    { employer: query },
+                    { year: query },
+                    { profile_link: query },
+                    { content: query },
+                    { wage: query }
+                ]
+            }, (err, data) => {
                 if (err) {
                     console.log('Error getting result: ', err);
                     return reject({ code: err.code, message: err.message });

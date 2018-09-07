@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
+  main_paragraph: string;
   paragraph_1: string;
   paragraph_2: string;
   paragraph_3: string;
@@ -15,6 +16,8 @@ export class HomepageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.main_paragraph = 'Веб страна која ги акумилира искуствата од минатите учесници на програмата Work and Travel USA.';
+
     this.paragraph_1 = 'Прочитај ги искуствата од другите студенти во секцијата ИСКУСТВА и информирај се од прва рака!';
     this.paragraph_2 = 'Прочитај ги нашите совети и најди одговор на често поставувани прашања во секциите СОВЕТИ и ПРАШАЊА !';
     this.paragraph_3 = 'Ако веќе си учествувал во програмата, сподели го твоето искуство во делот СПОДЕЛИ ИСКУСТВО и помогни им на идните студенти!';

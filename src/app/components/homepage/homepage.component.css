@@ -47,5 +47,21 @@ hr{
 }
 
 .homepage_disclaimer{
-    padding-bottom: 90px;
+    padding-bottom: 50px;
+    font-size: 12px;
+}
+
+.main_paragraph {
+    margin-top: 80px;
+}
+
+.main_paragraph h1 {
+    color: #c04526;
+    font-family: 'Bad Script', cursive;
+    font-size: 50px;
+}
+
+.main_paragraph h2 {
+    /* color: #c04526; */
+    font-weight: normal;
 }

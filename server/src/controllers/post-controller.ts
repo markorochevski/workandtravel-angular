@@ -20,6 +20,7 @@ class PostController {
                 year: newPost.year,
                 profile_link: newPost.profile_link,
                 profile_link_public: newPost.profile_link_public,
+                profile_link_path: this.getFacebookUserPath(newPost.profile_link),
                 is_approved: 'yes'
                 // TODO: change is_approved to no
             }, (err: any, data: any) => {
@@ -119,24 +120,41 @@ class PostController {
         return new Promise((resolve: any, reject: any) => {
             const words = input.split(' ');
             let text = '';
-            for(let word of words){
+            for (const word of words) {
                 text += word + '|';
             }
             text = text.slice(0, -1);
             console.log(text);
             const query = new RegExp(text, 'ig');
-            return Post.find({ employer: query }, (err: any, data: any) => {
-                if (err) {
-                    console.log('Error getting result: ', err);
-                    return reject({ code: err.code, message: err.message });
-                }
-                else {
-                    console.log('Success getting result');
-                  //  console.log(data);
-                    return resolve(data);
-                }
-            });
+            return Post.find(
+                {
+                    $or: [
+                        { agency: query },
+                        { route_name: query },
+                        { employer: query },
+                        { year: query },
+                        { profile_link: query },
+                        { content: query },
+                        { wage: query }
+                    ]
+                }, (err: any, data: any) => {
+                    if (err) {
+                        console.log('Error getting result: ', err);
+                        return reject({ code: err.code, message: err.message });
+                    }
+                    else {
+                        console.log('Success getting result');
+                        //  console.log(data);
+                        return resolve(data);
+                    }
+                });
         });
+    }
+
+    private getFacebookUserPath = (link: string) => {
+        const regex = new RegExp('.*\/');
+        const path = link.replace(regex, '');
+        return path;
     }
 }
 
