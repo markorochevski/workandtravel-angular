@@ -21,3 +21,8 @@ export interface newMessage{
     email: string;
     message: string;
 }
+
+export interface newQuestion{
+    title: string;
+    content: string;
+}
